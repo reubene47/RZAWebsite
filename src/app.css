@@ -1,0 +1,40 @@
+/* gochi hand */
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+/* unkempt */
+@import url('https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --color-darkgreen: #132a13;
+  --color-lightgreen: #839073;
+  --color-lightorange: #f9a03f;
+  --color-darkorange: #f15025;
+  --color-darkbrown: #2d080a;
+
+  --breakpoint-xs:480px;
+}
+
+body {
+  min-width: 480px;
+}
+
+/* gochi hand */
+.gochi-hand {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* unkempt */
+.unkempt {
+  font-family: "Unkempt", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.unkempt-bold {
+  font-family: "Unkempt", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
