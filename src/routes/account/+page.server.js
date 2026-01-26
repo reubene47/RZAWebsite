@@ -6,13 +6,12 @@ export async function load({ cookies }) {
   const user = await getLoggedInUser(cookies);
 
   if (!user) {
-    return { user: null, zooBookings: [], hotelBookings: [] };
+    return { user: null, zoo_bookings: [], hotel_bookings: [] };
   }
 
   // Use the single function
-  const { bookings: zooBookings, hotelBookings } = await getUserBookings(user.user_id);
-
-  return { user, zooBookings, hotelBookings };
+  const { zoo_bookings, hotel_bookings } = await getUserBookings(user.user_id);
+  return { user, zoo_bookings, hotel_bookings };
 }
 
 export const actions = {

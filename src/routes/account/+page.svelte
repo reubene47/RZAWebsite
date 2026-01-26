@@ -2,8 +2,8 @@
   export let data;
 
   const user = data.user;
-  const zooBookings = data.zooBookings;
-  const hotelBookings = data.hotelBookings;
+  const zoo_bookings = data.zoo_bookings;
+  const hotel_bookings = data.hotel_bookings;
 </script>
 
 <main class="p-6 flex flex-col items-center gap-6">
@@ -24,7 +24,7 @@
     <!-- Change Password Section -->
     <section class="w-[80%] max-w-xl p-4 border rounded-lg shadow-md">
       <h2 class="font-semibold mb-2">Change Password</h2>
-      <form method="POST" action="?/changePassword">
+      <form method="POST" action="?/change_password">
         <input name="currentPassword" type="password" placeholder="Current Password" class="border p-2 rounded w-full mb-2" required />
         <input name="newPassword" type="password" placeholder="New Password" class="border p-2 rounded w-full mb-2" required />
         <input name="confirmPassword" type="password" placeholder="Confirm New Password" class="border p-2 rounded w-full mb-2" required />
@@ -35,28 +35,28 @@
     <!-- Zoo Bookings -->
     <section class="w-[80%] max-w-xl p-4 border rounded-lg shadow-md">
       <h2 class="font-semibold mb-2">Zoo Bookings</h2>
-      {#if zooBookings.length > 0}
+      {#if zoo_bookings.length > 0}
         <ul class="list-disc pl-5">
-          {#each zooBookings as booking}
-            <li>{booking.date} - {booking.time} - {booking.ticket_type}</li>
+          {#each zoo_bookings as booking}
+            <li>{booking.visit_date} - {booking.num_adults} adults, {booking.num_children} children, {booking.num_infants} infants, {booking.num_concession} consession -</li>
           {/each}
         </ul>
       {:else}
-        <p>No zoo bookings found.</p>
+        <p>No zoo bookings found.<a href="/register" class="p-[5px] w-[100px] text-center text-lightorange text-black md:hover:text-darkorange md:hover:underline">Book</a></p>
       {/if}
     </section>
 
     <!-- Hotel Bookings -->
     <section class="w-[80%] max-w-xl p-4 border rounded-lg shadow-md">
       <h2 class="font-semibold mb-2">Hotel Bookings</h2>
-      {#if hotelBookings.length > 0}
+      {#if hotel_bookings.length > 0}
         <ul class="list-disc pl-5">
-          {#each hotelBookings as booking}
-            <li>{booking.check_in} → {booking.check_out} - {booking.room_type}</li>
+          {#each hotel_bookings as booking}
+            <li>{booking.checkin_date} → {booking.checkout_date} - {booking.room_type} | Adults: {booking.num_adults}, Children: {booking.num_children}, Infants: {booking.num_infants}</li>
           {/each}
         </ul>
       {:else}
-        <p>No hotel bookings found.</p>
+        <p>No hotel bookings found.<a href="/register" class="p-[5px] w-[100px] text-center text-lightorange text-black md:hover:text-darkorange md:hover:underline">Book</a></p>
       {/if}
     </section>
 

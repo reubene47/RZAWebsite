@@ -17,7 +17,7 @@ const password = form?.values?.password ?? '';
 <div class="flex flex-col justify-center items-center min-h-[100px]">
 
     <form class="login" method="POST" action="?/login" novalidate>
-        <div class="w-[50dvw] h-[80dvh] border-1 border-gray-300 rounded-lg shadow-lg flex flex-col items-center m-10 gap-5">
+        <div class="xs:w-[50dvw] w-[60dvw] md:w-[40dvw] min-h-[90dvh] border-1 border-gray-300 rounded-lg shadow-lg flex flex-col items-center m-10 gap-5">
             <p class="mt-5 font-bold">Login to your account</p>
             <p>Enter Email:</p>
             <input name="email" value={email} required type="email" placeholder="Email" class="p-2 border border-gray-300 rounded-lg shadow-md w-[80%] focus:border-lightorange focus:border-2 focus:outline-none"/>

@@ -22,7 +22,7 @@
     <!-- Book Box -->
 <div class="border-2 border-blue-500 flex flex-col items-center">
 
-    <form class="book" method="POST" action="?/add" novalidate>
+    <form class="book" method="POST" action="?/add_booking" novalidate>
         <div class="xs:w-[50dvw] w-[60dvw] md:w-[40dvw] min-h-[90dvh] border-1 border-gray-300 rounded-lg shadow-lg flex flex-col items-center m-10 gap-5">
             <p class="mt-5 font-bold">Zoo Booking</p>
             <p>Enter or Select Date:</p>

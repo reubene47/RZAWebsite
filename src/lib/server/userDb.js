@@ -42,14 +42,14 @@ export async function identifyUser(email, password) {
 
 // Fetch bookings for a user
 export async function getUserBookings(userId) {
-  const [hotelBookings] = await db.query(
+  const [hotel_bookings] = await db.query(
     'SELECT * FROM hotel_bookings WHERE user_id = ?',
     [userId]
   );
-  const [bookings] = await db.query(
-    'SELECT * FROM bookings WHERE user_id = ?',
+  const [zoo_bookings] = await db.query(
+    'SELECT * FROM zoo_bookings WHERE user_id = ?',
     [userId]
   );
-
-  return { bookings, hotelBookings };
+  
+  return { hotel_bookings, zoo_bookings };
 }
